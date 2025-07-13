@@ -1,0 +1,6 @@
+•	What happens in the controller method?
+ANS.  Spring calls getCountryIndia() → loads bean from country.xml → returns as JSON using Jackson.
+•	How the bean is converted into JSON reponse?
+ANS.  Spring Boot uses Jackson (in background) to convert the Country object into JSON format automatically.
+•	In network tab of developer tools show the HTTP header details received
+•	In postman click on "Headers" tab to view the HTTP header details received

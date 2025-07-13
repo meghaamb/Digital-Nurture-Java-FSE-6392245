@@ -1,0 +1,23 @@
+SME EXPLANATION:
+1. Spring XML Elements
+Element	Description
+<bean>	Defines a Spring-managed object (bean)
+id	Unique identifier for the bean
+class	The full path of the class whose object we want to create
+<property>	Sets property value via setter injection
+name	Property name (must match variable name).
+Name of the variable (like code, name)
+value	Value to assign to the property.
+The actual value to give (like "IN" or "India")
+
+2. ApplicationContext vs ClassPathXmlApplicationContext
+In Spring, ApplicationContext is the heart of the system. It manages the beans (objects), connects them, and gives them to us when needed.
+•	ApplicationContext is the central Spring container interface
+•	ClassPathXmlApplicationContext is a concrete implementation that loads beans from a *.xml file located in src/main/resources
+Example: ApplicationContext context = new ClassPathXmlApplicationContext("country.xml");
+3.What Happens When context.getBean() is Invoked?
+When we write : Country country = context.getBean("country", Country.class);
+•	Spring reads the XML config
+•	Instantiates the class defined in <bean>
+•	Injects values into the fields using <property>
+•	Returns the fully initialized bean object
